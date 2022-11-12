@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello</title>
+    <script>
+
+        let counter = 0;
+function count(){
+ counter++;
+ document.querySelector('h1').innerHTML = counter;
+
+const heading = document.querySelector('h1');
+ if(heading.innerHTML % 10 ===0){
+    alert(`your number is now ${counter   }`)
+ }
+ else if (heading.innerHTML == 7){
+  alert('the train is full , please get in to the next train');
+  
+ }
+ else if (heading.innerHTML == 7){
+   return break
+  
+ }
+
+}   
+document.addEventListener('DOMContentLoaded',function() {
+    
+    document.querySelector('button').addEventListener('click',count);
+
+})
+
+    </script>
+</head>
+<body>
+  
+<h1>0</h1>
+<button >count</button>
+
+</body>
+</html>

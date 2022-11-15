@@ -6,35 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hello</title>
     <script>
+if (!localStorage.getItem('counter')){
+    localStorage.setItem('counter', 0 );
+}
 
-        let counter = 0;
+
 function count(){
+    let counter = localStorage.getItem('counter')
  counter++;
  document.querySelector('h1').innerHTML = counter;
+ localStorage.setItem('counter', counter)
 
-const heading = document.querySelector('h1');
- if(heading.innerHTML % 10 ===0){
-    alert(`your number is now ${counter   }`)
- }
- else if (heading.innerHTML == 7){
-  alert('the train is full , please get in to the next train');
-  
- }
- else if (heading.innerHTML == 7){
-   return break
-  
- }
+// const heading = document.querySelector('h1');
 
 }   
 document.addEventListener('DOMContentLoaded',function() {
-    
+    document.querySelector('h1').innerHTML = localStorage.getItem('counter')
     document.querySelector('button').addEventListener('click',count);
-
+    
+    // setInterval(count, 1000)
 })
 
-    </script>
+    </script> 
 </head>
-<body>
+<body> 
   
 <h1>0</h1>
 <button >count</button>
